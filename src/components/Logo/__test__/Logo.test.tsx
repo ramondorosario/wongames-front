@@ -38,4 +38,14 @@ describe('<Logo />', () => {
 			screen.getByLabelText('Logo da Won Games').parentElement
 		).toHaveStyle({ width: '20rem', height: '6rem' });
 	});
+
+	it('Should render a logo without text if hideOnMobile', () => {
+		renderWithTheme(<Logo hideOnMobile />);
+
+		expect(
+			screen.getByLabelText('Logo da Won Games').parentElement
+		).toHaveStyleRule('width', '5.8rem', {
+			media: '(max-width: 768px)',
+		});
+	});
 });
