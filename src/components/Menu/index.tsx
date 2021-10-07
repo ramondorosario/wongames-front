@@ -56,7 +56,7 @@ export const Menu = ({ username }: MenuProps) => {
 							<Button>Sign in</Button>
 						) : (
 							<S.Profile>
-								<UserIcon />
+								<UserIcon data-testid="user-icon" />
 								<span>Username</span>
 								<S.IconWrapper>
 									<Chevronicon />
