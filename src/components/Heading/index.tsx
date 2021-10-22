@@ -19,7 +19,7 @@ export const Heading = ({
 	children,
 	borderBottom = false,
 	borderColor = 'primary',
-	borderLeft = true,
+	borderLeft = false,
 	size = 'medium',
 }: HeadingProps) => {
 	return (

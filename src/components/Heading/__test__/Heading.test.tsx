@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 describe('<Heading />', () => {
 	it('Should render a black heading with border left by default', () => {
-		renderWithTheme(<Heading>Lorem Ipsum</Heading>);
+		renderWithTheme(<Heading borderLeft>Lorem Ipsum</Heading>);
 		expect(screen.getByRole('heading', { name: 'Lorem Ipsum' })).toHaveStyle({
 			'border-left': '0.7rem solid #F231A5',
 			color: '#030517',
@@ -66,9 +66,9 @@ describe('<Heading />', () => {
 		});
 	});
 
-	it('Should render a heading with borderBottomColor secondary', () => {
+	it('Should render a heading with border colors secondary', () => {
 		renderWithTheme(
-			<Heading borderBottom borderColor="secondary">
+			<Heading borderLeft borderBottom borderColor="secondary">
 				Lorem Ipsum
 			</Heading>
 		);
