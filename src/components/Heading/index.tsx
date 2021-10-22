@@ -2,22 +2,25 @@ import { ReactNode } from 'react';
 import * as S from './styles';
 
 export type ColorHeading = 'white' | 'black';
-export type BorderColorHeading = 'greenDark' | 'pink';
+export type BorderColor = 'primary' | 'secondary';
+export type Size = 'small' | 'medium';
 
 export interface HeadingProps {
 	children: ReactNode;
 	borderLeft?: boolean;
 	borderBottom?: boolean;
-	borderColor?: BorderColorHeading;
+	borderColor?: BorderColor;
 	color?: ColorHeading;
+	size?: Size;
 }
 
 export const Heading = ({
 	color = 'black',
 	children,
 	borderBottom = false,
-	borderColor = 'greenDark',
+	borderColor = 'primary',
 	borderLeft = true,
+	size = 'medium',
 }: HeadingProps) => {
 	return (
 		<S.Wrapper
@@ -25,6 +28,7 @@ export const Heading = ({
 			borderBottom={borderBottom}
 			borderLeft={borderLeft}
 			color={color}
+			size={size}
 		>
 			{children}
 		</S.Wrapper>
