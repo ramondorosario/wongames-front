@@ -12,6 +12,9 @@ export default {
 		icon: {
 			type: '',
 		},
+		as: {
+			type: '',
+		},
 	},
 } as Meta;
 
@@ -28,4 +31,11 @@ WithIcon.args = {
 	children: 'Icon',
 	icon: <AddShoppingCart />,
 	size: 'small',
+};
+
+export const asLink = Template.bind({});
+asLink.args = {
+	children: 'Link',
+	as: 'a',
+	href: '/link',
 };

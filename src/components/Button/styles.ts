@@ -5,9 +5,9 @@ import styled, {
 } from 'styled-components';
 import { ButtonProps, Size } from '.';
 
-type ButtonStyleProps = Pick<ButtonProps, 'size' | 'fullWidth'> & {
+type ButtonStyleProps = {
 	hasIcon: boolean;
-};
+} & Pick<ButtonProps, 'size' | 'fullWidth'>;
 
 const buttonModifiers: Record<
 	Size,
@@ -39,9 +39,6 @@ const buttonModifiers: Record<
 	`,
 
 	withIcon: (theme) => css`
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
 		padding: 0 ${theme.spacings.xsmall};
 
 		svg {
@@ -56,6 +53,9 @@ const buttonModifiers: Record<
 
 export const Button = styled.button<ButtonStyleProps>`
 	${({ theme, size, fullWidth, hasIcon }) => css`
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		background: linear-gradient(
 			180deg,
 			#ff5f5f -14.51%,
@@ -68,6 +68,7 @@ export const Button = styled.button<ButtonStyleProps>`
 		color: ${theme.colors.white};
 		font-size: ${theme.font.sizes.small};
 		font-weight: ${theme.font.bold};
+		text-decoration: none;
 
 		:hover {
 			background: linear-gradient(180deg, #e35565 0%, #d958a6 100%),
