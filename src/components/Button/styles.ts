@@ -68,6 +68,7 @@ export const Button = styled.button<ButtonStyleProps>`
 		color: ${theme.colors.white};
 		font-size: ${theme.font.sizes.small};
 		font-weight: ${theme.font.bold};
+		font-family: ${theme.font.family};
 		text-decoration: none;
 
 		:hover {
