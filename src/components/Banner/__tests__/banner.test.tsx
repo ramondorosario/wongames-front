@@ -27,4 +27,22 @@ describe('<Banner />', () => {
 			screen.getByRole('heading', { name: props.subtitle })
 		).toBeInTheDocument();
 	});
+
+	it('Should render a Ribbon', () => {
+		renderWithTheme(
+			<Banner
+				{...props}
+				ribbonText="Mais vendido"
+				ribbonColor="primary"
+				ribbonSize="xlarge"
+			/>
+		);
+
+		expect(screen.getByText('Mais vendido')).toBeInTheDocument();
+		expect(screen.getByText('Mais vendido')).toHaveStyle({
+			backgroundColor: '#F231A5',
+			height: '4rem',
+			fontSize: '1.8rem',
+		});
+	});
 });

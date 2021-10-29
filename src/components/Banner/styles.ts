@@ -1,9 +1,20 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
+import * as RibbonStyles from 'components/Ribbon/styles';
 
 export const Wrapper = styled.div`
 	${({ theme }) => css`
 		position: relative;
+
+		${media.lessThan('large')`
+			${RibbonStyles.Wrapper} {
+				right: 0;
+
+				&::after {
+					display: none;
+				}
+			}
+		`}
 
 		${media.greaterThan('medium')`
 			border-radius: ${theme.border.radius};

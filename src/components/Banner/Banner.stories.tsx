@@ -13,12 +13,33 @@ export default {
 	},
 } as Meta;
 
-export const Default: Story<BannerProps> = (args) => <Banner {...args} />;
+export const Default: Story<BannerProps> = (args) => (
+	<div style={{ maxWidth: '80rem', margin: '0 auto' }}>
+		<Banner {...args} />
+	</div>
+);
 
 Default.parameters = {
 	viewport: {
 		defaultViewport: 'mobile1',
 	},
+	backgrounds: { default: 'dark' },
+	layout: 'fullscreen',
+};
+
+export const WithRibbon: Story<BannerProps> = (args) => (
+	<div style={{ maxWidth: '80rem', margin: '0 auto' }}>
+		<Banner {...args} />
+	</div>
+);
+
+WithRibbon.args = {
+	ribbonText: 'Mais vendido',
+	ribbonColor: 'primary',
+	ribbonSize: 'xlarge',
+};
+
+WithRibbon.parameters = {
 	backgrounds: { default: 'dark' },
 	layout: 'fullscreen',
 };
