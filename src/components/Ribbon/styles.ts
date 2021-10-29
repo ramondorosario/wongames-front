@@ -4,6 +4,7 @@ import styled, {
 	FlattenSimpleInterpolation,
 } from 'styled-components';
 import { RibbonColors, RibbonProps, RibbonSizes } from '.';
+import { darken } from 'polished';
 
 const wrapperModifiers: Record<
 	RibbonSizes,
@@ -16,10 +17,17 @@ const wrapperModifiers: Record<
 } = {
 	color: (theme: DefaultTheme, color: RibbonColors) => css`
 		background-color: ${theme.colors[color]};
+
+		&::after {
+			border-left-color: ${darken(0.2, theme.colors[color])};
+			border-top-color: ${darken(0.2, theme.colors[color])};
+		}
 	`,
 	small: (theme) => css`
 		height: 2.4rem;
 		font-size: ${theme.font.sizes.xsmall};
+		padding: 0 ${theme.spacings.small};
+		right: -1.5rem;
 
 		&::after {
 			top: 2.4rem;
@@ -30,6 +38,8 @@ const wrapperModifiers: Record<
 	large: (theme) => css`
 		height: 3.3rem;
 		font-size: ${theme.font.sizes.small};
+		padding: 0 ${theme.spacings.medium};
+		right: -2rem;
 
 		&::after {
 			top: 3.3rem;
@@ -40,6 +50,8 @@ const wrapperModifiers: Record<
 	xlarge: (theme) => css`
 		height: 4rem;
 		font-size: ${theme.font.sizes.large};
+		padding: 0 ${theme.spacings.large};
+		right: -2.5rem;
 
 		&::after {
 			top: 4rem;
@@ -51,8 +63,13 @@ const wrapperModifiers: Record<
 
 export const Wrapper = styled.div<Omit<RibbonProps, 'children'>>`
 	${({ theme, color, size }) => css`
+		position: absolute;
+		display: flex;
+		align-items: center;
 		font-weight: ${theme.font.bold};
-		position: relative;
+		color: ${theme.colors.white};
+		right: 0;
+		top: 4rem;
 
 		&::after {
 			content: '';

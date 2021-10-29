@@ -15,7 +15,14 @@ export default {
 } as Meta;
 
 export const Default: Story<RibbonProps> = (args) => (
-	<div style={{ width: '40rem', height: '40rem', background: '#cecece' }}>
+	<div
+		style={{
+			width: '40rem',
+			height: '40rem',
+			background: '#cecece',
+			position: 'relative',
+		}}
+	>
 		<Ribbon {...args}>{args.children}</Ribbon>
 	</div>
 );
