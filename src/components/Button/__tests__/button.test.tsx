@@ -18,7 +18,7 @@ describe('<Button />', () => {
 		renderWithTheme(<Button size="small">Small</Button>);
 
 		expect(screen.getByRole('button', { name: 'Small' })).toHaveStyle({
-			padding: '0 3.2rem',
+			padding: '0 0.8rem',
 			height: '3rem',
 			'font-size': '1.2rem',
 		});

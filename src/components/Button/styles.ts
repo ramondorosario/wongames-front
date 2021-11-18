@@ -30,7 +30,7 @@ const buttonModifiers: Record<
 
 	small: (theme) => css`
 		height: 3rem;
-		padding: 0 ${theme.spacings.medium};
+		padding: 0 ${theme.spacings.xxsmall};
 		font-size: ${theme.font.sizes.xsmall};
 	`,
 
