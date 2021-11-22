@@ -69,7 +69,7 @@ export const Wrapper = styled.div<Omit<RibbonProps, 'children'>>`
 		font-weight: ${theme.font.bold};
 		color: ${theme.colors.white};
 		right: 0;
-		top: 4rem;
+		top: 2rem;
 
 		&::after {
 			content: '';
