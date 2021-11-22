@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
 	max-width: 29.2rem;
+	position: relative;
 `;
 
 export const ImageBox = styled.div`
@@ -58,6 +59,8 @@ export const Developer = styled.h4`
 
 export const FavButton = styled.div`
 	${({ theme }) => css`
+		cursor: pointer;
+
 		svg {
 			width: 2.5rem;
 			height: 2.5rem;
