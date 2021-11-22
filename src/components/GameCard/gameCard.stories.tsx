@@ -11,11 +11,30 @@ export default {
 		price: 'R$ 235,00',
 		promotionalPrice: 'R$ 215,00',
 	},
+	argTypes: {
+		onFav: { action: 'clicked' },
+	},
 } as Meta;
 
 export const Default: Story<GameCardProps> = (args) => <GameCard {...args} />;
 
 Default.parameters = {
+	backgrounds: {
+		default: 'dark',
+	},
+};
+
+export const WithRibbon: Story<GameCardProps> = (args) => (
+	<GameCard {...args} />
+);
+
+WithRibbon.args = {
+	ribbon: '20% OFF',
+	ribbonSize: 'small',
+	ribbonColor: 'primary',
+};
+
+WithRibbon.parameters = {
 	backgrounds: {
 		default: 'dark',
 	},
