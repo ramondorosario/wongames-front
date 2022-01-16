@@ -19,7 +19,6 @@ Default.parameters = {
 	viewport: {
 		defaultViewport: 'mobile1',
 	},
-	// backgrounds: { default: 'dark' },
 	layout: 'fullscreen',
 };
 
@@ -36,6 +35,6 @@ WithFloatImage.parameters = {
 	viewport: {
 		defaultViewport: 'mobile1',
 	},
-	// backgrounds: { default: 'dark' },
+	// backgrounds: { default: 'won-dark' },
 	layout: 'fullscreen',
 };

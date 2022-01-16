@@ -23,7 +23,7 @@ Default.parameters = {
 	viewport: {
 		defaultViewport: 'mobile1',
 	},
-	backgrounds: { default: 'dark' },
+	backgrounds: { default: 'won-dark' },
 	layout: 'fullscreen',
 };
 
@@ -40,6 +40,6 @@ WithRibbon.args = {
 };
 
 WithRibbon.parameters = {
-	backgrounds: { default: 'dark' },
+	backgrounds: { default: 'won-dark' },
 	layout: 'fullscreen',
 };
