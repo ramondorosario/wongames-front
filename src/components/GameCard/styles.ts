@@ -1,8 +1,14 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
-	max-width: 29.2rem;
-	position: relative;
+	${({ theme }) => css`
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		background-color: ${theme.colors.white};
+	`}
 `;
 
 export const ImageBox = styled.div`
@@ -20,25 +26,25 @@ export const Content = styled.div`
 	${({ theme }) => css`
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
-
-		padding: ${theme.spacings.xsmall};
+		justify-content: space-between;
+		position: relative;
+		height: 100%;
+		margin: ${theme.spacings.xsmall};
 		background-color: ${theme.colors.white};
 	`}
 `;
 
 export const Info = styled.div`
-	${({ theme }) => css`
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: ${theme.spacings.xxsmall};
-	`}
+	max-width: calc(100% - 2.5rem);
 `;
 
 export const BuyBox = styled.div`
-	display: flex;
-	align-items: center;
-	align-self: flex-end;
+	${({ theme }) => css`
+		display: flex;
+		align-items: center;
+		align-self: flex-end;
+		margin-top: ${theme.spacings.xxsmall};
+	`}
 `;
 
 export const Title = styled.h3`
@@ -59,6 +65,9 @@ export const Developer = styled.h4`
 
 export const FavButton = styled.div`
 	${({ theme }) => css`
+		position: absolute;
+		right: 0;
+		top: -0.5rem;
 		cursor: pointer;
 
 		svg {

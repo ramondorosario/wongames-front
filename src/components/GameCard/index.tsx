@@ -47,18 +47,16 @@ export const GameCard = ({
 
 			<S.Content>
 				<S.Info>
-					<div>
-						<S.Title>{title}</S.Title>
-						<S.Developer>{developer}</S.Developer>
-					</div>
-					<S.FavButton role="button" onClick={onFav}>
-						{favorite ? (
-							<Favorite aria-label="Remove from wish list" />
-						) : (
-							<FavoriteBorder aria-label="Add to wish list" />
-						)}
-					</S.FavButton>
+					<S.Title>{title}</S.Title>
+					<S.Developer>{developer}</S.Developer>
 				</S.Info>
+				<S.FavButton role="button" onClick={onFav}>
+					{favorite ? (
+						<Favorite aria-label="Remove from wish list" />
+					) : (
+						<FavoriteBorder aria-label="Add to wish list" />
+					)}
+				</S.FavButton>
 
 				<S.BuyBox>
 					{!!promotionalPrice && (
