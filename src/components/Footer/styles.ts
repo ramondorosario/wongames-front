@@ -27,7 +27,6 @@ export const Content = styled.div`
 		${media.greaterThan('medium')`
 			grid-template-columns: repeat(4, 1fr);
 			gap: none;
-			border: 1px solid red;
 		`}
 	`}
 `;
